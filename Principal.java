@@ -92,7 +92,7 @@ public class Principal {
 	                   System.out.println("\n");
 	                   
 	                   do{
-	                	   System.out.println("Seleccione la posicion del equipo a editar la puntación de la lista");
+	                	   System.out.println("Seleccione la posicion del equipo a editar la puntaciÃ³n de la lista");
 		                   posicion =leer.nextInt();
 	                	   
 	                   }while(posicion >-1 && posicion >= listaResultado.size());
@@ -132,7 +132,7 @@ public class Principal {
 	                   salir=true;
 	                   break;
 	                default:
-	                   System.out.println("Solo números entre 1 y 4");
+	                   System.out.println("Solo nÃºmeros entre 1 y 4");
 	           }
 		       }
 		       while(!salir);
@@ -142,19 +142,6 @@ public class Principal {
 			System.out.println(e);
 		}
 
-	}
-
-	private static Resultados actualizar(Scanner leer) {
-		int res1;
-		int res2;
-		
-		System.out.println("Introduzca el resultado del equipo 1");
-		res1=leer.nextInt();
-		
-		System.out.println("Introduzca el resultado del equipo 2");
-		res2=leer.nextInt();
-		
-		return null;
 	}
 
 }
