@@ -134,6 +134,7 @@ public class Principal {
 		       }
 		       while(!salir);
 			
+			leer.close();
 			
 		} catch (Exception e) {
 			System.out.println(e);
