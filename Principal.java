@@ -27,12 +27,9 @@ public class Principal {
 		
 		String equipo1;
 		String equipo2;
-		int res1;
-		int res2;
 		
 		boolean salir = false;
-		boolean salir2 = false;
-	    int opcion; //Guardaremos la opcion del usuario
+	   	int opcion; //Guardaremos la opcion del usuario
 		
 		
 		try {
