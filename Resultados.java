@@ -1,8 +1,13 @@
 package footballResult;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Resultados {
+	
+	/**
+	 * CLASE DEL OBJETO RESULTADOS QUE UTILIZAREMOS.
+	 */
 	
 	private String nombre1;
 	private String nombre2;
@@ -10,24 +15,17 @@ public class Resultados {
 	private int resultado1;
 	private int resultado2;
 	
-	private LocalDateTime now;
 	
+	private LocalDateTime dateTime;
+
+	  public LocalDateTime getDateTime() {
+	    return dateTime;
+	  }
+
+	  public void setDateTime(LocalDateTime datetime) {
+	    this.dateTime = datetime;
+	  }
 	
-	
-	
-
-	public LocalDateTime getNow() {
-		return now;
-	}
-
-
-
-
-	public void setNow(LocalDateTime now) {
-		this.now = now;
-	}
-
-
 
 
 	public Resultados(String nombre1, String nombre2) {
@@ -35,7 +33,6 @@ public class Resultados {
 		this.nombre2 = nombre2;
 		this.resultado1=0;
 		this.resultado2=0;
-		this.now = LocalDateTime.now();
 	}
 
 
@@ -47,7 +44,22 @@ public class Resultados {
 		this.nombre2 = nombre2;
 		this.resultado1 = resultado1;
 		this.resultado2 = resultado2;
-		this.now = LocalDateTime.now();
+		
+		
+		
+		this.dateTime = horaActual();
+	}
+
+	/**
+	 * @return 
+	 * 
+	 */
+	private LocalDateTime horaActual() {
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("uuuu/MM/dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        dtf.format(now);
+        
+        return now;
 	}
 
 
